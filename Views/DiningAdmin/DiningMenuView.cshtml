@@ -1,0 +1,41 @@
+﻿@using HallManagementSystem.Models;
+@model IEnumerable<DiningMenu>
+@{
+    ViewBag.Title = "DiningMenuView";
+    Layout = "~/Views/Shared/_DiningMenu.cshtml";
+}
+
+<h3>Today's Menu</h3>
+<div class="col-md-2">
+    @{
+        foreach (var item in Model)
+        {
+            <p>Serial: @item.serial</p>      
+        }
+    }
+</div>
+<div class="col-md-4">
+    @{
+        foreach (var item in Model)
+        {
+            
+            <p>Name: @item.name</p>
+        }
+    }
+</div>
+<div class="col-md-2">
+    @{
+        foreach (var item in Model)
+        {
+            <p>Price: @item.price</p>
+        }
+    }
+</div>
+<div class="col-md-4">
+    @{
+        foreach (var item in Model)
+        {
+           <p> <img src="~/Content/@item.image" class="img-thumbnail" alt="Cinque Terre" width="150" height="110"></p>          
+        }
+    }
+</div>

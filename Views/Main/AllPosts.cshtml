@@ -1,0 +1,34 @@
+﻿@using HallManagementSystem.Models;
+@model IEnumerable<ProvostPost>
+@{
+    ViewBag.Title = "AllPosts";
+    Layout = "~/Views/Shared/_LoginHomeStudent.cshtml";
+}
+<h2>AllPosts</h2>
+
+@foreach (var item in Model)
+{
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <span>Title : @item.title</span>
+        </div>
+        <div class="panel-body">
+
+            <div class="row">
+                <div class="pull-left">
+                    Written By: @item.name
+                    [@item.desig]
+                </div>
+                <div class="pull-right">
+                    Date & Time: @item.dateTime
+                </div>
+            </div>
+
+            <div class="row">
+                @item.provostmessage
+            </div>
+
+        </div>
+    </div>
+}

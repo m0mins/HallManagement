@@ -1,0 +1,81 @@
+﻿@*@model HallManagementSystem.Models.Registration*@
+@model IEnumerable<HallManagementSystem.Models.Registration>
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_StudentDetailsAdmin.cshtml";
+}
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2>Student Registration</h2>
+    @foreach (var item in Model)
+    {
+        using (Html.BeginForm("Registration", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", name = "reg", id = "reg" }))
+        {
+            <form role="form">
+                <div class="form-group">
+
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" value="@item.name" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="faculty">Faculty:</label>
+                    <input type="text" class="form-control" value="@item.faculty" name="faculty" id="faculty">
+                </div>
+                <div class="form-group">
+                    <label for="desig">Designation:</label>
+                    <input type="text" class="form-control" value="@item.desig" name="desig" id="desig">
+                </div>
+                <div class="form-group">
+                    <label for="stuid">ID No :</label>
+                    <input type="text" class="form-control" value="@item.stuid" name="stuid" id="stuid">
+                </div>
+                <div class="form-group">
+                    <label for="reg">Regg  No:</label>
+                    <input type="text" class="form-control" value="@item.reg" name="reg" id="reg">
+                </div>
+                <div class="form-group">
+                    <label for="session">Session :</label>
+                    <input type="text" class="form-control" value="@item.session" name="session" id="session">
+                </div>
+                <div class="form-group">
+                    <label for="district">District :</label>
+                    <input type="text" class="form-control" value="@item.district" name="district" id="district">
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number :</label>
+                    <input type="text" class="form-control" value="@item.contact" name="contact" id="contact">
+                </div>
+                <div class="form-group">
+                    <label for="blood">Blood Group:</label>
+                    <input type="text" class="form-control" value="@item.blood" name="blood" id="blood">
+                </div>
+                <div class="form-group">
+                    <label for="hall">Hall Name:</label>
+                    <input type="text" class="form-control" value="@item.hall" name="hall" id="hall">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="text" class="form-control" value="@item.email" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Password:</label>
+                    <input type="text" class="form-control" value="@item.pwd" name="pwd" id="pwd">
+                </div>
+                <div class="form-group">
+                    <label for="image">Image:</label>
+                    <input type="file" class="form-control" name="file" id="file">
+                </div>   
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        }
+    }
+</div>
+<div class="col-md-4">
+
+</div>

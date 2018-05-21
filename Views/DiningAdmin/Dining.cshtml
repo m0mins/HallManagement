@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Dining";
+    Layout = "~/Views/Shared/_DiningAdmin.cshtml";
+}
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2>Login</h2>
+    @using (Html.BeginForm("Registration", "Main", FormMethod.Post, new { enctype = "multipart/form-data", name = "reg", id = "reg" }))
+    {
+        <form role="form">
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    }
+</div>
+<div class="col-md-4">
+
+</div>

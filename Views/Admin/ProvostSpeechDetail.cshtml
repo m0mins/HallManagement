@@ -1,0 +1,26 @@
+﻿@using HallManagementSystem.Models;
+@model IEnumerable<ProvostSpeech>
+@{
+    ViewBag.Title = "ProvostSpeechDetail";
+    Layout = "~/Views/Shared/_ProvostSpeechDetail.cshtml";
+}
+
+
+    <h2 style="text-align:center;">Provost Detail</h2>
+    @{
+        foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <img src="~/Content/@item.image" class="img-thumbnail" alt="Cinque Terre" width="150" height="110">
+                <p>Name: @item.name</p>
+                <p>Faculty: @item.faculty</p>
+            </div>
+        <div class="col-md-8">
+            <p>Speech :@item.speech</p>
+
+        </div>
+
+        }
+    }
+
+

@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DiningMenu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="serial" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="price" Type="nvarchar" MaxLength="50" />
+          <Property Name="image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DiningRegistration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="desig" Type="nvarchar" MaxLength="50" />
+          <Property Name="home" Type="nvarchar" MaxLength="50" />
+          <Property Name="contact" Type="nvarchar" MaxLength="50" />
+          <Property Name="hall" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HallAdmission">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="stuid" Type="nvarchar" MaxLength="50" />
+          <Property Name="regg" Type="nvarchar" MaxLength="50" />
+          <Property Name="session" Type="nvarchar" MaxLength="50" />
+          <Property Name="faculty" Type="nvarchar" MaxLength="50" />
+          <Property Name="semester" Type="nvarchar" MaxLength="50" />
+          <Property Name="hall" Type="nvarchar" MaxLength="50" />
+          <Property Name="room" Type="nvarchar" MaxLength="50" />
+          <Property Name="amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="ProvostPost">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="provostmessage" Type="nvarchar(max)" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" />
+          <Property Name="dateTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="desig" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ProvostSpeech">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="desig" Type="nvarchar" MaxLength="50" />
+          <Property Name="faculty" Type="nvarchar" MaxLength="50" />
+          <Property Name="speech" Type="nvarchar(max)" />
+          <Property Name="image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ProvostsRegistration">
+          <Key>
+            <PropertyRef Name="contact" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="desig" Type="nvarchar" MaxLength="50" />
+          <Property Name="faculty" Type="nvarchar" MaxLength="50" />
+          <Property Name="home" Type="nvarchar" MaxLength="50" />
+          <Property Name="contact" Type="int" Nullable="false" />
+          <Property Name="hall" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="image" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Registration">
+          <Key>
+            <PropertyRef Name="stuid" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="faculty" Type="nvarchar" MaxLength="100" />
+          <Property Name="stuid" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="reg" Type="nvarchar" MaxLength="50" />
+          <Property Name="session" Type="nvarchar" MaxLength="50" />
+          <Property Name="district" Type="nvarchar" MaxLength="50" />
+          <Property Name="contact" Type="nvarchar" MaxLength="50" />
+          <Property Name="blood" Type="nvarchar" MaxLength="50" />
+          <Property Name="hall" Type="nvarchar" MaxLength="100" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+          <Property Name="image" Type="nvarchar" MaxLength="50" />
+          <Property Name="desig" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StudentInsecureMessage">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="msg" Type="nvarchar(max)" />
+          <Property Name="title" Type="nvarchar" MaxLength="50" />
+          <Property Name="dateTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="desig" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StudentPost">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentpost" Type="nvarchar(max)" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="time" Type="nvarchar" MaxLength="50" />
+          <Property Name="date" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StudentProvostSecretMsg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="secretmsg" Type="varchar(max)" />
+          <Property Name="dateTime" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="DiningMenu" EntityType="Self.DiningMenu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DiningRegistration" EntityType="Self.DiningRegistration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HallAdmission" EntityType="Self.HallAdmission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvostPost" EntityType="Self.ProvostPost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvostSpeech" EntityType="Self.ProvostSpeech" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProvostsRegistration" EntityType="Self.ProvostsRegistration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentInsecureMessage" EntityType="Self.StudentInsecureMessage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentPost" EntityType="Self.StudentPost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentProvostSecretMsg" EntityType="Self.StudentProvostSecretMsg" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DiningMenu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="serial" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="DiningRegistration">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="desig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="home" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hall" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="HallAdmission">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="stuid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="regg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="faculty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="semester" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hall" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="room" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ProvostPost">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="provostmessage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dateTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="desig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ProvostSpeech">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="desig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="faculty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="speech" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ProvostsRegistration">
+          <Key>
+            <PropertyRef Name="contact" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="desig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="faculty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="home" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="contact" Type="Int32" Nullable="false" />
+          <Property Name="hall" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Registration">
+          <Key>
+            <PropertyRef Name="stuid" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="faculty" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="stuid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="reg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="district" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="blood" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hall" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pwd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="desig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StudentInsecureMessage">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="msg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dateTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="desig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StudentPost">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentpost1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StudentProvostSecretMsg">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="secretmsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="dateTime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="sb2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DiningMenus" EntityType="Self.DiningMenu" />
+          <EntitySet Name="DiningRegistrations" EntityType="Self.DiningRegistration" />
+          <EntitySet Name="HallAdmissions" EntityType="Self.HallAdmission" />
+          <EntitySet Name="ProvostPosts" EntityType="Self.ProvostPost" />
+          <EntitySet Name="ProvostSpeeches" EntityType="Self.ProvostSpeech" />
+          <EntitySet Name="ProvostsRegistrations" EntityType="Self.ProvostsRegistration" />
+          <EntitySet Name="Registrations" EntityType="Self.Registration" />
+          <EntitySet Name="StudentInsecureMessages" EntityType="Self.StudentInsecureMessage" />
+          <EntitySet Name="StudentPosts" EntityType="Self.StudentPost" />
+          <EntitySet Name="StudentProvostSecretMsgs" EntityType="Self.StudentProvostSecretMsg" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="sb2">
+          <EntitySetMapping Name="DiningMenus">
+            <EntityTypeMapping TypeName="Model.DiningMenu">
+              <MappingFragment StoreEntitySet="DiningMenu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="serial" ColumnName="serial" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="image" ColumnName="image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DiningRegistrations">
+            <EntityTypeMapping TypeName="Model.DiningRegistration">
+              <MappingFragment StoreEntitySet="DiningRegistration">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="desig" ColumnName="desig" />
+                <ScalarProperty Name="home" ColumnName="home" />
+                <ScalarProperty Name="contact" ColumnName="contact" />
+                <ScalarProperty Name="hall" ColumnName="hall" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+                <ScalarProperty Name="image" ColumnName="image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HallAdmissions">
+            <EntityTypeMapping TypeName="Model.HallAdmission">
+              <MappingFragment StoreEntitySet="HallAdmission">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="stuid" ColumnName="stuid" />
+                <ScalarProperty Name="regg" ColumnName="regg" />
+                <ScalarProperty Name="session" ColumnName="session" />
+                <ScalarProperty Name="faculty" ColumnName="faculty" />
+                <ScalarProperty Name="semester" ColumnName="semester" />
+                <ScalarProperty Name="hall" ColumnName="hall" />
+                <ScalarProperty Name="room" ColumnName="room" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvostPosts">
+            <EntityTypeMapping TypeName="Model.ProvostPost">
+              <MappingFragment StoreEntitySet="ProvostPost">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="provostmessage" ColumnName="provostmessage" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="desig" ColumnName="desig" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvostSpeeches">
+            <EntityTypeMapping TypeName="Model.ProvostSpeech">
+              <MappingFragment StoreEntitySet="ProvostSpeech">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="desig" ColumnName="desig" />
+                <ScalarProperty Name="faculty" ColumnName="faculty" />
+                <ScalarProperty Name="speech" ColumnName="speech" />
+                <ScalarProperty Name="image" ColumnName="image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProvostsRegistrations">
+            <EntityTypeMapping TypeName="Model.ProvostsRegistration">
+              <MappingFragment StoreEntitySet="ProvostsRegistration">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="desig" ColumnName="desig" />
+                <ScalarProperty Name="faculty" ColumnName="faculty" />
+                <ScalarProperty Name="home" ColumnName="home" />
+                <ScalarProperty Name="contact" ColumnName="contact" />
+                <ScalarProperty Name="hall" ColumnName="hall" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+                <ScalarProperty Name="image" ColumnName="image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registrations">
+            <EntityTypeMapping TypeName="Model.Registration">
+              <MappingFragment StoreEntitySet="Registration">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="faculty" ColumnName="faculty" />
+                <ScalarProperty Name="stuid" ColumnName="stuid" />
+                <ScalarProperty Name="reg" ColumnName="reg" />
+                <ScalarProperty Name="session" ColumnName="session" />
+                <ScalarProperty Name="district" ColumnName="district" />
+                <ScalarProperty Name="contact" ColumnName="contact" />
+                <ScalarProperty Name="blood" ColumnName="blood" />
+                <ScalarProperty Name="hall" ColumnName="hall" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="pwd" ColumnName="pwd" />
+                <ScalarProperty Name="image" ColumnName="image" />
+                <ScalarProperty Name="desig" ColumnName="desig" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentInsecureMessages">
+            <EntityTypeMapping TypeName="Model.StudentInsecureMessage">
+              <MappingFragment StoreEntitySet="StudentInsecureMessage">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="msg" ColumnName="msg" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="desig" ColumnName="desig" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentPosts">
+            <EntityTypeMapping TypeName="Model.StudentPost">
+              <MappingFragment StoreEntitySet="StudentPost">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="studentpost1" ColumnName="studentpost" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentProvostSecretMsgs">
+            <EntityTypeMapping TypeName="Model.StudentProvostSecretMsg">
+              <MappingFragment StoreEntitySet="StudentProvostSecretMsg">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="secretmsg" ColumnName="secretmsg" />
+                <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

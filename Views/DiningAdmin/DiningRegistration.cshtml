@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "DiningRegistration";
+    Layout = "~/Views/Shared/_DiningRegistration.cshtml";
+}
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2>Dining Registration</h2>
+    @using (Html.BeginForm("DiningRegistration", "DiningAdmin", FormMethod.Post, new { enctype = "multipart/form-data", name = "reg", id = "reg" }))
+    {
+        <form role="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="desig">Designation:</label>
+                <select id="desig" class="form-control" name="desig">
+
+
+                    <option value="Guide">Guide</option>
+
+                    <option value="Waiter">Waiter</option>
+
+                    <option selected="Manager" value="Guide">Manager</option>
+                </select>
+            </div>           
+            <div class="form-group">
+                <label for="home">Home Town :</label>
+                <input type="text" class="form-control" name="home" id="home">
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number :</label>
+                <input type="text" class="form-control" name="contact" id="contact">
+            </div>
+
+            <div class="form-group">
+                <label for="hall">Hall Name:</label>
+                <select id="hall" class="form-control" name="hall">
+
+                    <option value=""></option>
+
+                    <option value="0">D1</option>
+
+                    <option value="1">D3</option>
+
+                    <option selected="selected" value="2">Sher E Bangla Hall-2</option>
+
+                    <option value="3">D4</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" name="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" name="pwd" id="pwd">
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" class="form-control" name="file" id="file">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    }
+</div>
+<div class="col-md-4">
+
+</div>

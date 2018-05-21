@@ -1,0 +1,83 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+
+            <ul class="nav navbar-nav navbar-left">
+
+                <li><a href="#">Hall Gallery</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Facilities
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Indoor Game</a></li>
+                        <li><a href="#">Annual Feast</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Hall Admission</a></li>
+                <li><a href="#">Hall Dining</a></li>
+                <li><a href="~/Provost/ProvostPost">Hall Notice</a></li>
+                <li><a href="#">Hall Blood Donors</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Contact Us
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="~/Admin/AllStudents">Students</a></li>
+                        <li><a href="#">Office</a></li>
+                        <li><a href="#">Dining</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> Profile</a></li>
+
+            </ul>
+
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><input type="text" name="search" id="search"></li>
+            <li><a href="~/Main/Registration">Search</a></li>
+        </ul>
+
+    </nav>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group">
+
+                    <a href="~/Admin/AllStudents" class="list-group-item">All Students</a>
+                    <a href="#" class="list-group-item"><span class="badge">12</span> Request Message</a>
+
+                </div>
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+        </div>
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "ProvostSpeech";
+    Layout = "~/Views/Shared/_ProvostSpeech.cshtml";
+}
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2>Provost Registration</h2>
+    @using (Html.BeginForm("ProvostSpeech", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", name = "reg", id = "reg" }))
+    {
+        <form role="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="desig">Designation:</label>
+                <select id="desig" class="form-control" name="desig">
+
+
+                    <option value="Lecturer">Lecturer</option>
+
+                    <option value="Assistact Professon">Assistact Professon</option>
+
+                    <option selected="selected" value="Associate Professor">Associate Professor</option>
+
+                    <option value="Professor">Professor</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="faculty">Faculty:</label>
+                <select id="faculty" class="form-control" name="faculty">
+
+
+                    <option value="Agriculture">Agriculture</option>
+
+                    <option value="Fisheries">Fisheries</option>
+
+                    <option selected="selected" value="Computer Science and Engineernig">Computer Science and Engineernig</option>
+
+                    <option value="Business Administration and Management">Business Administration and Management</option>
+                    <option value="Animal Science and Veterinary Medicine">Animal Science and Veterinary Medicine</option>
+                    <option value="Animal Husbandary">Animal Husbandary</option>
+                    <option value="Disaster Management">Disaster Management</option>
+                    <option value="Nutrition and Food Science">Nutrition and Food Science</option>
+                    <option value="Land Management">Land Management</option>
+
+
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="speech">Speech :</label>
+                <textarea class="form-control" rows="5" name="speech" id="speech"></textarea>
+            </div>
+
+          
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input type="file" class="form-control" name="file" id="file">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    }
+</div>
+<div class="col-md-4">
+
+</div>

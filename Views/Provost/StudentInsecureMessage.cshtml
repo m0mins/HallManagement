@@ -1,0 +1,37 @@
+﻿@using HallManagementSystem.Models;
+@model IEnumerable<StudentInsecureMessage>
+@{
+    ViewBag.Title = "StudentInsecureMessage";
+    Layout = "~/Views/Shared/_ReceiveInsecureMessage.cshtml";
+}
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2 style="text-align:center;">Student  Details</h2>
+    @{foreach (var item in Model)
+    {
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <span>Title :@item.title </span>
+            </div>
+            <div class="panel-body">
+
+                <div class="row">
+                    <div class="pull-left">
+                        Written By:@item.name
+                    </div>
+                    <div class="pull-right">
+                        Date & Time: @item.dateTime
+                    </div>
+                </div>
+
+                <div class="row">
+                    @item.msg
+                </div>
+
+            </div>
+        </div>
+    }
+    }

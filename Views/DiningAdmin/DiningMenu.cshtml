@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "DiningMenu";
+    Layout = "~/Views/Shared/_DiningMenu.cshtml";
+}
+<h2>Today's Menu</h2>
+@using (Html.BeginForm("DiningMenu", "DiningAdmin", FormMethod.Post, new { enctype = "multipart/form-data", name = "reg", id = "reg" }))
+    {
+    <form role="form">
+        <div class="row">
+
+            <div class="col-md-2">
+
+                <div class="form-group">
+                    <label for="serial">Serial No:</label>
+                    <input type="text" class="form-control" name="serial" id="serial">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" name="name" id="name">
+
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="price">Price :</label>
+                    <input type="text" class="form-control" name="price" id="price">
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="image">Image  :</label>
+                    <input type="file" class="form-control" name="file" id="file">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-10">
+
+            </div>
+
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-default">Post</button>
+
+                
+            </div>
+        </div>
+    </form>
+}

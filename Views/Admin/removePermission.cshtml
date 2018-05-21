@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "removePermission";
+    Layout = "~/Views/Shared/_StudentDetailsAdmin.cshtml";
+    string item = "yes";
+    string item2 = "no";
+}
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2>Are You Want to Delete From Your List  ????????</h2>
+
+    <div class="row">
+
+
+        <div class="pull-left">
+
+            <p><a href="@Href("~/Admin/removePermission2/" + item)"><span class="glyphicon glyphicon-arrow-right" style="color:black; font-size:larger; font-family:'Book Antiqua';">Yesss !!!! </span></a></p>
+            @*<p>
+                <a href="@Href("~/Admin/removePermission2/" + item)" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            </p>*@
+
+         </div>
+        <div class="pull-right">
+            <p><a href="@Href("~/Admin/removePermission2/" + item2)"><span class="glyphicon glyphicon-arrow-right" style="color:black; font-size:larger; font-family:'Book Antiqua';">Nooo !!!!</span></a></p>
+        </div>
+
+
+    </div>
+
+</div>
+<div class="col-md-4">
+
+</div>

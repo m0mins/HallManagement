@@ -1,0 +1,61 @@
+﻿@model IEnumerable<HallManagementSystem.Models.HallAdmission>
+@{
+    ViewBag.Title = "HallFees";
+    Layout = "~/Views/Shared/_LoginHomeStudent.cshtml";
+}
+
+<h2>HallFees</h2>
+
+
+@foreach(var item in Model)
+{
+    <table class="table table-bordered">
+
+    <h3 style="text-align:center;font-weight:bold;">Hall Fees Transaction)</h3>
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Student Faculty</th>
+            <th>Semester</th>
+            <th>Hall</th>
+            <th>Amount</th>
+            <th>Status</th>
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+
+            <td><span class="pull-left glyphicon glyphicon-calendar">@item.stuid</span></td>
+            <td><span class="pull-left glyphicon">@item.name</span></td>
+            <td><span class="pull-left glyphicon">@item.faculty</span></td>
+            <td><span class="pull-left glyphicon">@item.semester</span></td>
+            <td><span class="pull-left glyphicon">@item.hall</span></td>
+            <td><span class="pull-left glyphicon">@item.amount</span></td>
+           @{
+                string sta = null;
+                if (item.status == null)
+                {
+                    sta = "Not Approved!!!"; 
+                }
+                    
+                else
+                {
+                    sta = "Approved!!!"; 
+                }
+                    
+                  
+               
+           }
+
+            <td><span class="pull-left glyphicon">@sta</span></td>
+        </tr>
+    </tbody>
+
+</table>
+}
+

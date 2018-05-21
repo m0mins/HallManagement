@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DiningMenu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="serial" Type="int" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="price" Type="nvarchar" MaxLength="50" />
+    <Property Name="image" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DiningRegistration">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="desig" Type="nvarchar" MaxLength="50" />
+    <Property Name="home" Type="nvarchar" MaxLength="50" />
+    <Property Name="contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="hall" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="image" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="HallAdmission">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="stuid" Type="nvarchar" MaxLength="50" />
+    <Property Name="regg" Type="nvarchar" MaxLength="50" />
+    <Property Name="session" Type="nvarchar" MaxLength="50" />
+    <Property Name="faculty" Type="nvarchar" MaxLength="50" />
+    <Property Name="semester" Type="nvarchar" MaxLength="50" />
+    <Property Name="hall" Type="nvarchar" MaxLength="50" />
+    <Property Name="room" Type="nvarchar" MaxLength="50" />
+    <Property Name="amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="status" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ProvostPost">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="provostmessage" Type="nvarchar(max)" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="dateTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="desig" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProvostSpeech">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="desig" Type="nvarchar" MaxLength="50" />
+    <Property Name="faculty" Type="nvarchar" MaxLength="50" />
+    <Property Name="speech" Type="nvarchar(max)" />
+    <Property Name="image" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ProvostsRegistration">
+    <Key>
+      <PropertyRef Name="contact" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="desig" Type="nvarchar" MaxLength="50" />
+    <Property Name="faculty" Type="nvarchar" MaxLength="50" />
+    <Property Name="home" Type="nvarchar" MaxLength="50" />
+    <Property Name="contact" Type="int" Nullable="false" />
+    <Property Name="hall" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="image" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="stuid" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="faculty" Type="nvarchar" MaxLength="100" />
+    <Property Name="stuid" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="reg" Type="nvarchar" MaxLength="50" />
+    <Property Name="session" Type="nvarchar" MaxLength="50" />
+    <Property Name="district" Type="nvarchar" MaxLength="50" />
+    <Property Name="contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="blood" Type="nvarchar" MaxLength="50" />
+    <Property Name="hall" Type="nvarchar" MaxLength="100" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="pwd" Type="nvarchar" MaxLength="50" />
+    <Property Name="image" Type="nvarchar" MaxLength="50" />
+    <Property Name="desig" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StudentInsecureMessage">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="msg" Type="nvarchar(max)" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="dateTime" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="desig" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StudentPost">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="studentpost" Type="nvarchar(max)" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="time" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StudentProvostSecretMsg">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="secretmsg" Type="varchar(max)" />
+    <Property Name="dateTime" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="DiningMenu" EntityType="Self.DiningMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DiningRegistration" EntityType="Self.DiningRegistration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HallAdmission" EntityType="Self.HallAdmission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProvostPost" EntityType="Self.ProvostPost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProvostSpeech" EntityType="Self.ProvostSpeech" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProvostsRegistration" EntityType="Self.ProvostsRegistration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentInsecureMessage" EntityType="Self.StudentInsecureMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentPost" EntityType="Self.StudentPost" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentProvostSecretMsg" EntityType="Self.StudentProvostSecretMsg" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

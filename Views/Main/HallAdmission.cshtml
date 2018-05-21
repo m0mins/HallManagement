@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "HallAdmission";
+    Layout = "~/Views/Shared/_HallAdmission.cshtml";
+}
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2>Hall  Admission</h2>
+    @using (Html.BeginForm("HallAdmission", "Main", FormMethod.Post, new { enctype = "multipart/form-data", name = "reg", id = "reg" }))
+    {
+        <form role="form">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" class="form-control" name="name" id="name">
+            </div>
+            <div class="form-group">
+                <label for="stuid">ID:</label>
+                <input type="text" class="form-control" name="stuid" id="stuid">
+            </div>
+            <div class="form-group">
+                <label for="regg">Registration:</label>
+                <input type="text" class="form-control" name="regg" id="regg">
+            </div>
+            <div class="form-group">
+                <label for="session">Session:</label>
+                <input type="text" class="form-control" name="session" id="session">
+            </div>
+            <div class="form-group">
+                <label for="faculty">Faculty:</label>
+                <select id="faculty" class="form-control" name="faculty">
+
+
+                    <option value="Agriculture">Agriculture</option>
+
+                    <option value="Business Administration and Management">Business Administration and Management</option>
+
+                    <option selected="selected" value="Computer Science and Engineernig">Computer Science and Engineernig</option>
+
+                    <option value="Fisheries">Fisheries</option>
+                    <option value="Animal Science and Veterinary Medicine">Animal Science and Veterinary Medicine</option>
+                    <option value="Animal Husbandary">Animal Husbandary </option>
+                    <option value="Disaster Management">Disaster Management</option>
+                    <option value="Nutrition and Food Science">Nutrition and Food Science</option>
+                    <option value="Land Management">Land Management</option>
+
+
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="semester">Semester:</label>
+                <input type="text" class="form-control" name="semester" id="semester">
+            </div>
+            <div class="form-group">
+                <label for="hall">Hall Name:</label>
+                <select id="hall" class="form-control" name="hall">
+
+                    <option value="Sher E Bangla Hall-1">Sher E Bangla Hall-1</option>
+                    <option selected="selected" value="Sher E Bangla Hall-2">Sher E Bangla Hall-2</option>
+                    <option value="Keramot Ali Hall">Keramot Ali Hall</option>
+                    <option value="Bangabondhu Hall">Bangabondhu Hall</option>
+                    <option value="Sufia Kamal Hall">Sufia Kamal Hall</option>
+                    <option value="Fajilatunnessa Mujib Hall">Fajilatunnessa Mujib Hall</option>
+
+
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="room">Room Name:</label>
+                <input type="text" class="form-control" name="room" id="room">
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="text" class="form-control" name="amonut" id="amount">
+            </div>
+           
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    }
+
+</div>
+<div class="col-md-4">
+
+</div>
+   

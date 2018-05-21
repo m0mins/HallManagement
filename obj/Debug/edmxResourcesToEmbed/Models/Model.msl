@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="sb2">
+    <EntitySetMapping Name="DiningMenus">
+      <EntityTypeMapping TypeName="Model.DiningMenu">
+        <MappingFragment StoreEntitySet="DiningMenu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="serial" ColumnName="serial" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DiningRegistrations">
+      <EntityTypeMapping TypeName="Model.DiningRegistration">
+        <MappingFragment StoreEntitySet="DiningRegistration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="desig" ColumnName="desig" />
+          <ScalarProperty Name="home" ColumnName="home" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="hall" ColumnName="hall" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HallAdmissions">
+      <EntityTypeMapping TypeName="Model.HallAdmission">
+        <MappingFragment StoreEntitySet="HallAdmission">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="stuid" ColumnName="stuid" />
+          <ScalarProperty Name="regg" ColumnName="regg" />
+          <ScalarProperty Name="session" ColumnName="session" />
+          <ScalarProperty Name="faculty" ColumnName="faculty" />
+          <ScalarProperty Name="semester" ColumnName="semester" />
+          <ScalarProperty Name="hall" ColumnName="hall" />
+          <ScalarProperty Name="room" ColumnName="room" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProvostPosts">
+      <EntityTypeMapping TypeName="Model.ProvostPost">
+        <MappingFragment StoreEntitySet="ProvostPost">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="provostmessage" ColumnName="provostmessage" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="desig" ColumnName="desig" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProvostSpeeches">
+      <EntityTypeMapping TypeName="Model.ProvostSpeech">
+        <MappingFragment StoreEntitySet="ProvostSpeech">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="desig" ColumnName="desig" />
+          <ScalarProperty Name="faculty" ColumnName="faculty" />
+          <ScalarProperty Name="speech" ColumnName="speech" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProvostsRegistrations">
+      <EntityTypeMapping TypeName="Model.ProvostsRegistration">
+        <MappingFragment StoreEntitySet="ProvostsRegistration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="desig" ColumnName="desig" />
+          <ScalarProperty Name="faculty" ColumnName="faculty" />
+          <ScalarProperty Name="home" ColumnName="home" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="hall" ColumnName="hall" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="image" ColumnName="image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="Model.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="faculty" ColumnName="faculty" />
+          <ScalarProperty Name="stuid" ColumnName="stuid" />
+          <ScalarProperty Name="reg" ColumnName="reg" />
+          <ScalarProperty Name="session" ColumnName="session" />
+          <ScalarProperty Name="district" ColumnName="district" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="blood" ColumnName="blood" />
+          <ScalarProperty Name="hall" ColumnName="hall" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="desig" ColumnName="desig" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentInsecureMessages">
+      <EntityTypeMapping TypeName="Model.StudentInsecureMessage">
+        <MappingFragment StoreEntitySet="StudentInsecureMessage">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="msg" ColumnName="msg" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="desig" ColumnName="desig" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentPosts">
+      <EntityTypeMapping TypeName="Model.StudentPost">
+        <MappingFragment StoreEntitySet="StudentPost">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="studentpost1" ColumnName="studentpost" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentProvostSecretMsgs">
+      <EntityTypeMapping TypeName="Model.StudentProvostSecretMsg">
+        <MappingFragment StoreEntitySet="StudentProvostSecretMsg">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="secretmsg" ColumnName="secretmsg" />
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

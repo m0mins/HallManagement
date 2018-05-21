@@ -1,0 +1,47 @@
+﻿@using HallManagementSystem.Models;
+@model IEnumerable<Registration>
+@{
+    ViewBag.Title = "studentDetail";
+    Layout = "~/Views/Shared/_StudentDetailsAdmin.cshtml";
+}
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h2 style="text-align:center;">Student  Details</h2>
+    @{
+        foreach (var item in Model)
+        {
+            <img src="~/Content/@item.image" class="img-thumbnail" alt="Cinque Terre" width="150" height="110">
+
+            <p>Name: @item.name</p>
+            <p>Faculty: @item.faculty</p>
+            <p>Student Id: @item.stuid</p>
+            <p>Session: @item.session</p>
+            <p>Home Town: @item.district</p>
+            <p>Contact Number: @item.contact</p>
+            <p>Email Address: @item.email</p>
+        <div>&nbsp;</div>
+        <div class="row">
+
+            <div class="pull-left">
+                <p><a href="@Href("~/Admin/removePermission/" + item.stuid)"><span class="glyphicon alert-danger" style="color:black; font-size:larger; font-family:'Book Antiqua';">Delete !!!</span></a></p>
+            </div>
+            <div class="pull-right">
+                <p><a href="@Href("~/Admin/Edit/" + item.stuid)"><span class="glyphicon alert-danger" style="color:black; font-size:larger; font-family:'Book Antiqua';">Edit !!!</span></a></p>
+            </div>
+
+
+        </div>
+        
+        
+        
+        }
+    }
+
+</div>
+<div class="col-md-4">
+
+</div>
+

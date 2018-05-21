@@ -1,0 +1,29 @@
+﻿@using HallManagementSystem.Models;
+@model IEnumerable<ProvostsRegistration>
+@{
+    ViewBag.Title = "ProvostProfile";
+    Layout = "~/Views/Shared/_ProvostProfile.cshtml";
+}
+
+<div class="col-md-4">
+
+</div>
+<div class="col-md-4">
+    <h3 style="text-align:center;">Profile</h3>
+    @{
+        foreach (var item in Model)
+        {
+            <img src="~/Content/@item.image" class="img-thumbnail" alt="Cinque Terre" width="150" height="110">
+
+            <p>Name: @item.name</p>
+            <p>Faculty: @item.faculty</p>
+            <p>Home Town: @item.home</p>
+            <p>Contact Number: @item.contact</p>
+            <p>Email Address: @item.email</p>
+        }
+    }
+
+</div>
+<div class="col-md-4">
+
+</div>
