@@ -1,0 +1,1 @@
+### It is a hall management project . Here students and teachers can be communicate dynamically . Hall admission , hall notice , dining system , meal order , everything include a university hall system can be done by this project dynamically. 
